@@ -1,0 +1,11 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dd-backend
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dd-frontend      
