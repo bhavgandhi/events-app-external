@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: deloitte-drifters-frontend
+  namespace: dd-all
   labels:
     app: deloitte-drifters-frontend
 spec:
@@ -45,6 +46,7 @@ apiVersion: v1
 kind: Service
 metadata: 
   name: deloitte-drifters-frontend-service
+  namespace: dd-all
 spec: 
   ports: 
      -  port: 80
@@ -59,6 +61,7 @@ apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
   name: deloitte-drifters-frontend-autoscaler
+  namespace: dd-all
 spec:
   scaleTargetRef:
     apiVersion: apps/v2beta1

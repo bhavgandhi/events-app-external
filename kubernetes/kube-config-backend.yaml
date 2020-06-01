@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: deloitte-drifters-backend
+  namespace: dd-all
   labels:
     app: deloitte-drifters-backend
 spec:
@@ -43,6 +44,7 @@ apiVersion: v1
 kind: Service
 metadata: 
   name: deloitte-drifters-backend-service
+  namespace: dd-all
 spec: 
   ports: 
      -  port: 80
